@@ -1,0 +1,295 @@
+// .chatBubble{
+
+//     //position: relative;
+  
+//     // :last-child {
+//     //   margin-bottom: 10px;
+//     // }
+  
+//     img.profile-pic {
+//       width: 50px;
+//       height: 50px;
+//       border-radius: 50%;
+//       position: relative;
+//     //bottom: 10px;
+//       float: left;
+//       top:15px;
+//     }
+  
+//     img.profile-pic.left {
+//       left: 15px;
+//     }
+  
+//     img.profile-pic.right {
+//       right: 15px;
+//     }
+  
+//     .message {
+//       font-size: 14px;
+//       word-wrap: break-word;
+//       white-space: normal;
+//     }
+  
+//     .message-detail {
+//       white-space: nowrap;
+//       font-size: 14px;
+//     }
+  
+//     .chat-bubble {
+//       border-radius: 5px;
+//       display: inline-block;
+//       padding: 10px 18px;
+//       position: relative;
+//       margin: 10px;
+//       max-width: 90%;
+//     }
+  
+//     .chat-bubble:before {
+//       content: "\00a0";
+//       display: block;
+//       height: 16px;
+//       width: 9px;
+//       position: absolute;
+//       bottom: -7.5px;
+//     }
+  
+//     .chat-bubble.left {
+//       background-color: #e6e5eb;
+//       float: left;
+//       margin-left: 20px;
+//     }
+  
+//     .chat-bubble.left:before {
+//       background-color: #e6e5eb;
+//       left: 10px;
+//       -webkit-transform: rotate(70deg) skew(5deg);
+//     }
+  
+//     .chat-bubble.right {
+//       background-color: #158ffe;
+//       color: #fff;
+//       float: right;
+//       margin-right: 45px;
+//     }
+  
+//     .chat-bubble.right:before {
+//       background-color: #158ffe;
+//       right: 10px;
+//       -webkit-transform: rotate(118deg) skew(-5deg);
+//     }
+  
+//     .chat-bubble.right a.autolinker {
+//       color: #fff;
+//       font-weight: bold;
+//     }
+//   }
+
+//   .chat{
+//     display: flex;
+//     flex-direction: column;
+    
+//     .me{
+//         position: relative;
+//         margin:20px 5px 0px;
+//         max-width: 80%;
+//         align-self: flex-end;
+//         padding: 6px 10px 7px;
+//         border-radius: 15px 15px 0;
+//         background-color: #3296fa;
+//         font-size: medium;
+//         line-height: 1.4;
+//         color:#fff;
+//     }
+//     .you{
+//         position: relative;
+//         margin:15px;
+//         max-width: 80%;
+//         align-self: flex-start;
+//         padding: 6px 10px 7px;
+//         border-radius: 15px 15px 15px 0;
+//         background-color: #dadada;
+//         font-size: medium;
+//         line-height: 1.4;
+
+//     }
+//     .name{
+//         font-size: small;
+//         font-weight: bold;
+//     }
+// }
+// ion-card{
+//     background-color: #f7f7f7;
+//     padding: 0px;
+//     /* border: 1px solid; */
+//     border-radius: 10px;
+// }
+// .message-input {
+//     width: 100%;
+//     border: 1px solid var(--ion-color-medium);
+//     border-radius: 6px;
+//     background: #fff;
+//     resize: none;
+//     margin-top: 0px;
+//     --padding-start: 8px;
+// }
+ 
+// .message {
+//     padding: 10px !important;
+//     border-radius: 10px !important;
+//     margin-bottom: 4px !important;
+//     white-space: pre-wrap;
+// }
+ 
+// .my-message {
+//     background:#3296fa;
+//     color: #fff;
+// }
+ 
+// .other-message {
+//     background: #fa6400d1;
+//     color: #fff;
+// }
+ 
+// .time {
+//     color: #dfdfdf;
+//     float: right;
+//     font-size: small;
+// }
+ion-content{
+.conversation{
+  background: #fff;
+  height: 92vh;
+  margin-top: 5px;
+  border-bottom-left-radius:38px ;
+  border-bottom-right-radius: 38px;
+  .chat-section{
+    height: calc(100% -90px);
+    //overflow: scroll;
+    .chat{
+      display: flex;
+      flex-direction: column;
+      .message{
+        display: flex;
+        flex-direction: column;
+        .message{
+          border-radius: 18px;
+          padding: 18px 20px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          font-size: 0.9rem;
+          
+        }
+      }
+      .yours{
+        align-items: flex-start;
+        span{
+          font-size: 0.7rem;
+          color: #363636;
+          margin-left: 40px;
+        }
+        .other_name{
+          font-size: 0.8rem;
+          color: #5c4108;
+          margin-left: 0px;
+          font-weight: 500;
+        }
+        .message{
+          background: #bd9d59;
+          position: relative;
+          color:#fff;
+        }
+        .message.last{
+          &:before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left:-7px;
+            height: 20px;
+            width: 20px;
+            background: #bd9d59;
+            border-bottom-right-radius: 15px;
+
+          }
+          &:after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: -10px;
+            width: 10px;
+            height: 20px;
+            background: #fff;
+            border-bottom-right-radius: 10px;
+          }
+        }
+        .last-message-others{
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+          ion-avatar{
+            max-width: 30px;
+            max-height: 30px;
+            margin-right: 15px;
+            margin-bottom: 7px;
+          }
+        }
+      }
+      .mine{
+        align-items: flex-end;
+        span{
+          font-size: 0.7rem;
+          color: #a6a6a6;
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          ion-icon{
+            font-size: 1.1rem;
+
+          }
+        }
+        .message{
+          color:#fff;
+          margin-left:25% ;
+          background: #a57715;
+          background-attachment: fixed;
+          position: relative;
+        }
+        .message-last{
+          &:before{
+            content: "";
+            position: absolute;
+            z-index:0 ;
+            bottom: 0;
+            right: -8px;
+            height: 20px;
+            width: 20px;
+            background: #a57715;
+            background-attachment: fixed;
+            border-bottom-left-radius: 15px;
+
+          }
+          &:after{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: -10px;
+            width: 10px;
+            height: 20px;
+            background: white;
+            border-bottom-left-radius: 10px;
+
+          }
+        }
+      }
+      .other{
+        margin-left: 45px;
+
+      }
+    }
+    
+  }
+
+}
+}

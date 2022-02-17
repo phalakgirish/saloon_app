@@ -1,0 +1,34 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]='true'>
+  <!-- <div class="ion-text-center ion-no-padding">
+    <img src="../../../assets/images/DMN_logo.jpg">
+  </div> -->
+  <ion-slides [options]="slideOpts" >
+    <ion-slide>
+      
+        <img src="../../../assets/slider/PSX_20210927_101758.jpg" class="slide">
+     
+    </ion-slide>
+    <ion-slide>
+     
+        <img src="../../../assets/slider/PSX_20210927_102619.jpg" class="slide">
+      
+    </ion-slide>
+    <!-- <ion-slide>
+     
+        <img src="../../../assets/slider/PSX_20210927_103003.jpg" class="slide">
+     
+    </ion-slide> -->
+  </ion-slides>
+</ion-content>

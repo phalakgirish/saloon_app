@@ -1,0 +1,48 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+    <ion-title>
+      Loyalty
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <ion-list class="ion-no-padding">
+   
+      <ion-item *ngFor="let code of loyalty;"  lines="full" color="light" routerLink="/qr-code/{{code.loyalty_id}}">
+        <ion-thumbnail slot="start">
+          <ion-img src="{{code.loyalty_img}}">
+          
+          </ion-img>
+        </ion-thumbnail>
+        <ion-label>{{code.loyalty_name}}</ion-label>
+        <ion-text slot="end" color="medium">{{code.redeem_count}}/{{code.loyalty_no}}</ion-text>
+      </ion-item> 
+  
+    
+    <!-- <ion-item lines="full" color="light" routerLink="/qr-code/1">
+      <ion-thumbnail slot="start">
+        <ion-img src="../../../assets/images/profile_1.jpg">
+        
+        </ion-img>
+      </ion-thumbnail>
+      <ion-label>Program 2</ion-label>
+      <ion-text slot="end" color="medium">3/10</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light" routerLink="/qr-code/2">
+      <ion-thumbnail slot="start">
+        <ion-img src="../../../assets/images/profile_1.jpg">
+        </ion-img>
+      </ion-thumbnail>
+      <ion-label>Program 3</ion-label>
+      <ion-text slot="end" color="medium">1/10</ion-text>
+    </ion-item> -->
+  </ion-list>
+</ion-content>

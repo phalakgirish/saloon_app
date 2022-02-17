@@ -1,0 +1,25 @@
+ion-content {
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }
+
+// ion-slides {
+//     height: 100%;
+//     max-width: 100vw !important;
+//     max-height: 100vh !important;
+//   }
+ion-slide{
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    //height: 100%;
+    //max-width: 100vw !important;
+    //max-height: 100vh !important;
+    background-size: cover;
+    background-position: center;
+   
+
+    //min-width: 365px !important;
+}

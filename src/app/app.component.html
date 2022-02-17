@@ -1,0 +1,72 @@
+<ion-app>  
+     <ion-menu side="start" menuId="first" contentId="content">  
+       <ion-content color="medium">  
+         <!-- <ion-list *ngFor="let pages of navigate">  
+           <ion-menu-toggle auto-hide="true">  
+             <ion-item color="medium" class="item no-padding" [routerLink]="pages.url" routerDirection="backward" lines="full">  
+               <ion-icon [name]="pages.icon" slot="start"></ion-icon>{{pages.title}}   
+             </ion-item>
+            </ion-menu-toggle>  
+         </ion-list>   -->
+         <ion-list >
+          <ion-menu-toggle auto-hide="true">
+            <ion-item [routerLink]="['/homepage']" routerDirection="root" lines="full"  color="medium">
+              <ion-icon name="home" slot="start"></ion-icon> Home
+            </ion-item>
+           </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="true">
+           <ion-item [routerLink]="['/location']" routerDirection="root" lines="full"  color="medium">
+             <ion-icon name="location" slot="start"></ion-icon> Location
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/booking']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="call" slot="start"></ion-icon>Book
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           
+           <ion-item [routerLink]="['/managebooking']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="calendar" slot="start"></ion-icon>Manage Booking
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/gift-vouchers']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="cash" slot="start"></ion-icon>Gift Vouchers
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['loyalty']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="cut" slot="start"></ion-icon>Loyality
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/profile']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="people" slot="start"></ion-icon> Staff Profile
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/reviews']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="chatbox-ellipses" slot="start"></ion-icon>Reviews
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/instagram']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="logo-instagram" slot="start"></ion-icon>Design
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['/fanwall']" routerDirection="root" lines="full" color="medium">
+            <ion-icon name="chatbubble-ellipses" slot="start"></ion-icon>Fan Wall
+           </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+           <ion-item [routerLink]="['#']" routerDirection="root" lines="full" color="medium" (click)="logout()">
+             <ion-icon name="power-sharp" slot="start"></ion-icon>&nbsp;Logout
+           </ion-item>
+          </ion-menu-toggle>
+       </ion-list>
+       </ion-content>   
+     </ion-menu>  
+     <ion-router-outlet Id="content"></ion-router-outlet>  
+</ion-app>  

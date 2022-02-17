@@ -1,0 +1,15 @@
+.wrap-text {
+    white-space: normal !important
+  }
+  ion-item{
+    // --border-radius: 5% !important;
+    padding: 1px 5px 1px 5px;
+    ion-label{
+        font-size: 14px;
+        color:#ffff;
+    }
+    ion-img{
+        border-radius: 15% !important;
+    }
+  }
+  

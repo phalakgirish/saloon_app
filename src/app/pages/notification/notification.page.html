@@ -1,0 +1,144 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+   <ion-title>Notification</ion-title>
+   <ion-buttons slot="end">
+    <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <!-- Item Dividers in a List -->
+  <ion-list *ngFor="let note of notification">
+    <ion-item-divider>
+      <ion-label class="note_title">
+        {{note.notification_title}}
+      </ion-label>
+      <ion-col>
+        <div class="ion-text-end note_date">
+          <ion-label>
+           {{note.notification_created | date:'longDate'}}
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-item-divider>
+    <div class="ion-text-justify note_content">
+      <ion-label>
+        {{note.notification_desc}}
+      </ion-label>
+    </div>
+    
+    
+    
+  </ion-list>
+<!-- <ion-list>
+  <ion-item-divider>
+    <ion-label class="note_title">
+      Title
+    </ion-label>
+    <ion-col>
+      <div class="ion-text-end note_date">
+        <ion-label>
+         Date
+        </ion-label>
+      </div>
+    </ion-col>
+  </ion-item-divider>
+  <div class="ion-text-justify note_content">
+    <ion-label>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-label>
+  </div>
+  
+  
+  
+</ion-list>
+<ion-list>
+  <ion-item-divider>
+    <ion-label class="note_title">
+      Title
+    </ion-label>
+    <ion-col>
+      <div class="ion-text-end note_date">
+        <ion-label>
+         Date
+        </ion-label>
+      </div>
+    </ion-col>
+  </ion-item-divider>
+  <div class="ion-text-justify note_content">
+    <ion-label>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac vehicula lorem.
+    </ion-label>
+  </div>
+  
+  
+  
+</ion-list> -->
+  <!-- <div #map id="map"></div> -->
+  <!-- <ion-row>
+    <ion-col size==12>
+      <ion-list>
+        <ion-item>
+          <ion-label>Title of page</ion-label>
+          <ion-label >Date</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row> -->
+      
+  <!-- <ion-item lines="none" class="child-list">
+    <ion-row>
+      <ion-col size="12" >
+        <ion-text>
+          12 Nov 2021
+         </ion-text>
+      </ion-col> 
+     <ion-col size="12" >
+       <ion-text>
+        Title - 1
+      </ion-text>
+     
+    </ion-col> 
+    <ion-col size="12" >
+      <ion-label>Answer:</ion-label>
+    </ion-col> 
+   
+    </ion-row>
+  <hr>
+  </ion-item> -->
+    <!-- <ion-item lines="full" color="light">
+      <ion-label>Tuesday</ion-label>
+      <ion-text slot="end" >10:00AM to 08:00PM</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light">
+      <ion-label>Wednesday</ion-label>
+      <ion-text slot="end" >10:00AM to 08:00PM</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light">
+      <ion-label>Thrusday</ion-label>
+      <ion-text slot="end" >10:00AM to 08:00PM</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light">
+      <ion-label>Friday</ion-label>
+      <ion-text slot="end" >10:00AM to 08:00PM</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light">
+      <ion-label>Saturday</ion-label>
+      <ion-text slot="end" >10:00AM to 08:00PM</ion-text>
+    </ion-item>
+    <ion-item lines="full" color="light">
+      <ion-label>Sunday</ion-label>
+      <ion-text slot="end" >Close</ion-text>
+    </ion-item> -->
+</ion-content>

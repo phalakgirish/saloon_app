@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+   <ion-title>Design</ion-title>
+   <ion-buttons slot="end">
+    <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- {{url}} -->
+  <!-- <iframe class= 'webPage'  src="https://www.instagram.com/dmn_salon/?hl=en/embed" allowfullscreen></iframe> -->
+  <!-- <ion-card>
+    <ion-card-content>
+      <div class="elfsight-app-9ced296a-f8fe-4074-ab83-322bbc862b0c"></div>
+    </ion-card-content>
+  </ion-card> -->
+  <div id="container">
+    <div class="box">
+      <ion-grid>
+  
+        <div class="ion-text-center"><img class="img" src='assets/images/Instagram_logo_2016.svg.png'>
+          <ion-card>
+            <ion-card-content>
+          <h3>
+            Our Designs
+          </h3>
+         
+          <ion-button expand="full" color="dark"  (click)="openURL()">Check Instragram</ion-button>
+        </ion-card-content>
+        </ion-card>     
+        </div>
+      </ion-grid>
+    </div>
+    
+  </div>
+</ion-content> 
+ 

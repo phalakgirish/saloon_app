@@ -1,0 +1,68 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+   <ion-title>Fan Wall</ion-title>
+   <ion-buttons slot="end">
+    <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="chatBubble">
+    <img class="profile-pic {{msg.position}}" src="{{msg.img}}">
+    <div class="chat-bubble {{msg.position}}">
+      
+      <div class="message">{{msg.content}}</div>
+      <div class="message-detail">
+          <span style="font-weight:bold;">{{msg.senderName}} </span>,
+          <span>{{msg.time}}</span>
+      </div>
+    </div>
+  </div> -->
+<div class="conversation ion-padding">
+  <div class="chat-section" id="chat">
+  
+    <div class="chat" *ngFor="let code of msg;" >
+      <div class="yours message" *ngIf="code.uid !== uid">
+        <!-- <div class="message others">
+          Hey
+        </div>
+        <div class="message others">
+         You there
+        </div> -->
+        <div class="last-message-others">
+          <!-- <ion-avatar>
+            <img src="{{msg.img}}">
+          </ion-avatar> -->
+          
+          <div class="message last">
+            <span class="other_name"> {{code.uname}}</span>  
+            {{code.post_comments}}
+          </div>
+         </div>
+         
+         <span> {{code.post_created_at | date:'short'}}</span>
+      </div>
+     
+      
+      <div class="mine message" *ngIf="code.uid==uid">
+       
+        <div class="message message-last">
+          {{code.post_comments}}
+        </div>
+        <span>
+         {{code.post_created_at | date:'short'}}
+        </span>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" color="medium" routerLink="/fanwall-post">Post Comments</ion-button>
+</ion-footer>

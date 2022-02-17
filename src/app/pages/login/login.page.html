@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>login</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <ion-img src="../../assets/images/header.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        Welcome
+      </ion-card-title>
+      <ion-card-subtitle>
+        Login with creditial
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="singin-btns">
+        <ion-button (click)="GoToLogin()" fill="solid" color="dark" shape="round" class="loginbtn">
+          LOGIN
+        </ion-button>
+        <ion-button (click)="GoToSignUp()" fill="outline" shape="round" color="dark">
+          SIGN UP
+        </ion-button>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

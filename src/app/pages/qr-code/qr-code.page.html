@@ -1,0 +1,31 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+    <ion-title>
+      Free Loyality
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let code of loyalty;">
+    <ion-img src="{{code.loyalty_img}}">    </ion-img>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center" color="dark">{{code.loyalty_name}}</ion-card-subtitle>
+     
+    </ion-card-header>
+    <ion-card-content>
+      Offer description - 
+      {{code.loyalty_des}}
+      
+      <ion-button color="primary" expand="full" color="medium" (click)="scanCode()">
+        Scan Code
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

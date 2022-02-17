@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" color="medium">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">  
+      <ion-menu-button></ion-menu-button>   
+    </ion-buttons>  
+   <ion-title>Reviews</ion-title>
+   <ion-buttons slot="end">
+    <ion-button [routerLink]="['/notification']"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/homepage']" routerDirection="root"><ion-icon name="home-outline"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <!-- <ion-card>
+   <ion-card-content>
+    <div class="elfsight-app-0bbd1413-f46e-4b2a-aed7-34341b755c5d"></div>
+   </ion-card-content>
+ </ion-card> -->
+ 
+
+<!-- <iframe class='webPage'  [src]="url"></iframe> -->
+<!-- <iframe border=0 frameborder=0 height=250 width=550 [src]="url"></iframe>-->
+<div id="container">
+  <div class="box">
+    <ion-grid>
+
+      <div class="ion-text-center"><img class="img" src='assets/images/googleReviews.jpg'>
+        <ion-card>
+          <ion-card-content>
+        <h3>
+          Google Reviews
+        </h3>
+       
+        <ion-button expand="full" color="dark"  (click)="GotoBooking()">Check Google Reviews</ion-button>
+      </ion-card-content>
+      </ion-card>     
+      </div>
+    </ion-grid>
+  </div>
+  
+</div>
+</ion-content>

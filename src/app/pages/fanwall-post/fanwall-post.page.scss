@@ -1,0 +1,55 @@
+
+.wrapform{
+    margin-top: 15px;
+
+}
+ion-item{
+    color:#74787E;
+    --border-color:#74787E;
+    --highlight-color-focused:#000;
+    --padding-start:0px;
+    --inner-padding-end:0;
+    font-size: 12px;
+    ion-input{
+        color:#000;
+    }
+}
+.error_message{
+    color:#df0000;
+    font-size: 12px;
+}
+.password_forgot{
+    text-align:right;
+    ion-button{
+        font-size: 12px;
+        color:#664808;
+    }
+}
+.sign-btn-wrap{
+    text-align: center;
+    padding-top:20px;
+
+    .sign-btn{
+        --ion-background-color:#215AB7;
+        color:#FAF6FA;
+
+    }
+}
+ion-card{
+    --ion-background-color:transparent;
+    //box-shadow: none;
+}
+.signUp{
+    text-align:center;
+    .txt_signUp{
+        font-size: 12px;
+        color:rgb(65, 64, 64);
+        a{
+            font-size: 12px;
+            color:#664808;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    }
+   
+}   

@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>loginscreen</ion-title> -->
+  </ion-toolbar>
+  <ion-button slot="start">
+    <ion-back-button defulthref="login" text=""></ion-back-button>
+  </ion-button>
+</ion-header>
+
+<ion-content>
+    <ion-card class="ion-no-margin">
+      <ion-img src="../../assets/images/header1.png"></ion-img>
+      <ion-card-content>
+      <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)"> 
+        <div class="wrapform">
+          <ion-item>
+            <ion-icon name="mail-outline"></ion-icon>
+            <ion-input type="text" name="email" formControlName="email" placeholder="Email" required></ion-input>
+          </ion-item>
+          <div>
+              <ng-container *ngFor="let validation of validationUserMessage.email"> 
+                <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                  {{validation.message}}
+                </div>
+              </ng-container>
+          </div>
+          <ion-item>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <ion-input type="password" name="password" formControlName="password" placeholder="Password"  required></ion-input>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let validation of validationUserMessage.password"> 
+              <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                {{validation.message}}
+              </div>
+            </ng-container>
+        </div>
+        </div>
+        <div class="password_forgot">
+            <ion-button fill="clear" class="ion-no-padding" >Forgot Password</ion-button>
+        </div>
+        <div class="sign-btn-wrap">
+            <ion-button type="submit" shape="round" fill="solid" color="dark" class="sign-btn" [disabled]="!validationFormUser.valid">Login</ion-button>
+        </div>
+        <div class="text-tag">
+          <span>OR</span>
+        </div>
+        
+         
+          <div class="social-btns">
+              <!-- <ion-button fill="clear"  class="facebookbtn ion-no-padding" (click)="fblogin()">
+            <ion-img src="../../assets/images/facebook.png"></ion-img>
+              </ion-button> -->
+              <ion-button type="button" fill="solid" color="danger" class="google_sign-btn" (click)="googleLogin()">Login with Google</ion-button>
+              
+          </div>
+          <div class="signUp">
+            <span class="txt_signUp">
+             You don't have account? <a routerLink='/signup'>Sign Up</a>
+            </span>
+          </div>
+      </form>
+      </ion-card-content>
+      
+    </ion-card>
+  
+
+       
+         
+       
+     
+      
+   
+</ion-content>
